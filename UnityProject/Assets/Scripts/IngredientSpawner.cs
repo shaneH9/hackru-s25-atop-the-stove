@@ -2,16 +2,16 @@ using UnityEngine;
 using System.Collections;
 public class IngredientSpawner : MonoBehaviour
 {
-    public GameObject[] ingredients;
-    public Transform spawnArea;
+    [SerializeField] private GameObject[] ingredients;
     public float spawnInterval = 15f;
+    private Vector2 spawnMin = new Vector2(0,0);
+    private Vector2 spawnMax = new Vector2(20,20);
 
     private int currentIngredientCount = 0;
     private const int maxIngredients = 3;
-    private bool isBomb;
 
     private void Start()
-    {
+    {                
         StartCoroutine(SpawnIngredients());
     }
 
@@ -32,8 +32,8 @@ public class IngredientSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, ingredients.Length);
 
         Vector3 spawnPosition = new Vector3(
-        Random.Range(spawnArea.position.x - spawnArea.localScale.x / 2, spawnArea.position.x + spawnArea.localScale.x / 2),
-        Random.Range(spawnArea.position.y - spawnArea.localScale.y / 2, spawnArea.position.y + spawnArea.localScale.y / 2),
+        Random.Range(spawnMin.x, spawnMax.x),
+        Random.Range(spawnMin.y, spawnMax.y),
         0f
     );
         Instantiate(ingredients[randomIndex], spawnPosition, Quaternion.identity);
