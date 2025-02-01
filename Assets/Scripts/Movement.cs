@@ -4,7 +4,6 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed; 
     private Rigidbody2D body;
-    Vector2 movement; 
 
     private void Awake()
     {
@@ -13,7 +12,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        movement.Set(InputManager.Movement.x *speed,InputManager.Movement.y *speed);
-        
+       body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") *speed, Input.GetAxis("Vertical")*speed);
+
     }
 }
