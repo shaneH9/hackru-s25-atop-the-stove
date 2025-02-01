@@ -21,6 +21,6 @@ public class Movement : MonoBehaviour
     private void Update()
     {
        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") *speed, Input.GetAxis("Vertical")*speed);
-       
+
     }
 }
