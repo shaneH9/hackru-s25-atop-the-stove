@@ -7,10 +7,10 @@ public class Card
     public string imagePath; // Path or reference to the card's image (can be used for UI display)
 
     // Constructor
-    public Card(string cardName, string category, int points, string desc, string imagePath)
+    public Card(string cardName, int rating, string desc, string imagePath)
     {
         this.title = cardName;
-        this.rating = points;
+        this.rating = rating;
         this.desc = desc;
         this.imagePath = imagePath;
     }

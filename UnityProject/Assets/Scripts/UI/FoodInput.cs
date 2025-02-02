@@ -1,7 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class FoodInput : MonoBehaviour
 {
+    public TMP_InputField foodNameInput;
+    public TMP_InputField numOfItemsInput;
+    public TMP_InputField caloriesInput;
+
+
+
     public void onSubmit()
     {
         Debug.Log("Food submitted!");

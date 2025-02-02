@@ -11,9 +11,9 @@ public class CardOptions : MonoBehaviour
         // Define 3 sample cards (you can modify this to load from a database or user data)
         Card[] cardsToSpawn = new Card[]
         {
-            new Card("Pizza", "Food", 50, "A delicious cheesy pizza!", "Images/Pizza"),
-            new Card("Burger", "Food", 40, "Juicy and tasty burger with fries.", "Images/Burger"),
-            new Card("Ice Cream", "Dessert", 30, "Sweet and creamy dessert.", "Images/IceCream")
+            new Card("Pizza", 50, "A delicious cheesy pizza!", "Images/Pizza"),
+            new Card("Burger", 40, "Juicy and tasty burger with fries.", "Images/Burger"),
+            new Card("Ice Cream", 30, "Sweet and creamy dessert.", "Images/IceCream")
         };
 
         // Ensure the card container is assigned
