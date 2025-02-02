@@ -5,6 +5,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed; 
     [SerializeField] private Vector3 startPos;
     private Rigidbody2D body;
+    private Vector2 position;
     
     
 
@@ -22,5 +23,8 @@ public class Movement : MonoBehaviour
     {
        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") *speed, Input.GetAxis("Vertical")*speed);
        
+       
     }
+
+
 }
