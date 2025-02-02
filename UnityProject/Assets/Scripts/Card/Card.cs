@@ -1,17 +1,17 @@
 [System.Serializable]
 public class Card
 {
-    public string title;  // Name of the food item
-    public int rating;       // Points associated with the card (e.g., score or ability points)
-    public string desc;    
-    public string imagePath; // Path or reference to the card's image (can be used for UI display)
+    public string title;          // Name of the food item (mapped from card_name)
+    public int rating;            // Points associated with the card (mapped from card_rating)
+    public string desc;           // Description of the card (mapped from special_technique)
+    public string imageUrl;       // Image URL for the card (mapped from image_url)
 
     // Constructor
-    public Card(string cardName, int rating, string desc, string imagePath)
+    public Card(string cardName, int rating, string desc, string imageUrl)
     {
-        this.title = cardName;
+        title = cardName;
         this.rating = rating;
         this.desc = desc;
-        this.imagePath = imagePath;
+        this.imageUrl = imageUrl;
     }
 }

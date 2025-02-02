@@ -1,0 +1,14 @@
+[
+  {
+    "card_name": "Cheesy Slice",
+    "card_rating": 3,
+    "special_technique": "Crust Shield",
+    "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxQaXp6YXxlbnwwfHx8fDE3Mzg0NjQ1MDZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+  },
+  {
+    "card_name": "Roasted Vegetable Wrap",
+    "card_rating": 4.5,
+    "special_technique": "Whole wheat wrap stuffed with roasted vegetables and hummus",
+    "image_url": "https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxSb2FzdGVkJTIwVmVnZXRhYmxlJTIwV3JhcHxlbnwwfHx8fDE3Mzg0NzEwNzV8MA&ixlib=rb-4.0.3&q=80&w=1080"
+  }
+]
