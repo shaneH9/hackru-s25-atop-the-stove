@@ -24,7 +24,7 @@ public class CardDisplay : MonoBehaviour
         RateText.text = card.rating.ToString();
 
         // Set the category
-        DescText.text = "Category: " + card.desc;
+        DescText.text = card.desc;
 
         // Start the image download coroutine
         if (card.imageUrl != null)

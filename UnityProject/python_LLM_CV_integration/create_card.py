@@ -81,8 +81,9 @@ def main(food_item_name, number_of_items, estimated_calories, output_file):
     - **estimated_calories** (integer): The total estimated calories for the given quantity.
 
     ### **Instructions:**
-    1. **Contextual Description**: 
-        - Briefly describe the food item, its general perception (e.g., healthy, indulgent), and common uses.
+    1. **Special Technique**: 
+        - Briefly describe the food item, its general perception (e.g., healthy, indulgent), and special technique
+        that lists the strengths and weaknesses of this dish based on the previous attributes.
     2. **Card Generation** (Ensure strict adherence to the following JSON format):
         - **card_name** (string): A concise, playful name for the card (max 5 words).
         - **card_rating** (integer): A **health score from 1 to 10**, where:
@@ -112,6 +113,34 @@ def main(food_item_name, number_of_items, estimated_calories, output_file):
 
     # Now, generate an AI suggestion for an alternative food
     prompt_alternative = f'''
+    You are an AI system designed to generate a structured food item playing card based on an input containing:
+    - **food_item_name** (string): The name of the food item (must use the food item name or relate to real-world food)
+    - **number_of_items** (integer): The quantity of the food item.
+    - **estimated_calories** (integer): The total estimated calories for the given quantity.
+
+    ### **Instructions:**
+    1. **Special Technique**: 
+        - Briefly describe the food item, its general perception. Then detail its special technique
+        it must have a clear strength and weakness based on the previous attributes. The description
+        should be engaging and provide a good understanding of the food item.
+    2. **Card Generation** (Ensure strict adherence to the following JSON format):
+        - **card_name** (string): A concise, playful name for the card (max 5 words).
+        - **card_rating** (integer): A **health score from 1 to 10**, where:
+          - 10 = Extremely healthy (low calories, high nutrition)
+          - 7–9 = Healthy (good balance of nutrients)
+          - 4–6 = Moderate (some nutritional benefits but has drawbacks)
+          - 1–3 = Indulgent (high in calories, low in nutrients)
+        - **special_technique** (string): A unique move inspired by the food item, similar to Pokémon abilities.
+    3. **Consistent JSON Format**:
+        - The final JSON output **must be structured exactly as follows**:
+        ```json
+        {{
+          "card_name": "string",
+          "card_rating": integer,
+          "special_technique": "string"
+        }}
+        ```
+
     Suggest a healthy alternative to {food_item_name}. Ensure it follows the same JSON structure.
     The alternative food should be healthy and fit the same criteria as the input food.
     The response must return a valid JSON block that looks exactly like this:
