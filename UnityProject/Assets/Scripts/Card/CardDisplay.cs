@@ -1,17 +1,22 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using System.Collections;
 
 public class CardDisplay : MonoBehaviour
 {
-    public Image Image;       // The Image UI component to display the card's food image
-    public TextMeshProUGUI TitleText;     // The Text UI component to display the card's name
-    public TextMeshProUGUI RateText;   // The Text UI component to display the card's points
-    public TextMeshProUGUI DescText; // The Text UI component to display the card's category
+    public Image Image;               // The Image UI component to display the card's food image
+    public TextMeshProUGUI TitleText; // The Text UI component to display the card's name
+    public TextMeshProUGUI RateText;  // The Text UI component to display the card's points
+    public TextMeshProUGUI DescText;  // The Text UI component to display the card's category
 
     // Method to initialize and populate the card data
     public void InitializeCard(Card card)
     {
+        // Debug
+        Debug.Log("Initializing card: " + card.title);
+        Debug.Log("Rating: " + card.rating + " Desc: " + card.desc + " Image URL: " + card.imageUrl);
         // Set the card name
         TitleText.text = card.title;
 
@@ -19,17 +24,29 @@ public class CardDisplay : MonoBehaviour
         RateText.text = card.rating.ToString();
 
         // Set the category
-        DescText.text = "Category: " + card.desc;
+        DescText.text = card.desc;
 
-        // Set the card image (using Resources.Load to load the sprite dynamically)
-        Sprite cardSprite = Resources.Load<Sprite>(card.imagePath);
-        if (cardSprite != null)
+        // Start the image download coroutine
+        if (card.imageUrl != null)
         {
-            Image.sprite = cardSprite;
+            StartCoroutine(DownloadImage(card.imageUrl));  // Download the image from the URL
+        }
+    }
+
+    // Coroutine to download the image and set it to the Image component
+    private IEnumerator DownloadImage(string imageUrl)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(imageUrl);
+        yield return request.SendWebRequest();
+
+        if (request.isNetworkError || request.isHttpError)
+        {
+            UnityEngine.Debug.LogError("Error downloading image: " + request.error);
         }
         else
         {
-            Debug.LogError("Image for " + card.title + " not found!");
-        }   
+            Texture2D texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+            Image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)); // Set the texture to the Image component
+        }
     }
 }

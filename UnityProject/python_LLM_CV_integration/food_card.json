@@ -1,0 +1,14 @@
+[
+  {
+    "card_name": "Cheesy Slice Blast",
+    "card_rating": 4,
+    "special_technique": "Dough Shield",
+    "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxQaXp6YXxlbnwwfHx8fDE3Mzg0NjQ1MDZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+  },
+  {
+    "card_name": "Whole Wheat Pita Stuffed with Roasted Vegetables",
+    "card_rating": 4.5,
+    "special_technique": "Grilled to perfection",
+    "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxQaXp6YXxlbnwwfHx8fDE3Mzg0NjQ1MDZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+  }
+]

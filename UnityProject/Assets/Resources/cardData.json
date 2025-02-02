@@ -1,0 +1,14 @@
+[
+  {
+    "card_name": "Cheesy Slice Master",
+    "card_rating": 3,
+    "special_technique": "Meltdown Shield: Reduce damage from healthy opponents by 20% for one turn, but increase damage taken from indulgent opponents by 10% for one turn.",
+    "image_url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxQaXp6YXxlbnwwfHx8fDE3Mzg0NjQ1MDZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+  },
+  {
+    "card_name": "Fungi Fury",
+    "card_rating": 8,
+    "special_technique": "Mushroom Shield",
+    "image_url": "https://images.unsplash.com/photo-1512595765784-5ebad80772a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDQxNzJ8MHwxfHNlYXJjaHwxfHxGdW5naSUyMEZ1cnl8ZW58MHx8fHwxNzM4NDcxNzg2fDA&ixlib=rb-4.0.3&q=80&w=1080"
+  }
+]
